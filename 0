@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Script to list files in a directory
+
+# Check if a directory is provided
+if [ -z "$1" ]; then
+    echo "Usage: $0 <directory>"
+    exit 1
+fi
+
+# Check if the argument is a valid directory
+if [ ! -d "$1" ]; then
+    echo "Error: '$1' is not a valid directory."
+    exit 1
+fi
+
+# List files in the directory
+ls "$1"
+return 0
+
